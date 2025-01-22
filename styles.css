@@ -1,0 +1,233 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+h1, p {
+    font-size: 1.5rem;
+    color: #555;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-out {
+    opacity: 1;
+}
+
+.fade-out.hidden {
+    opacity: 0;
+}
+
+.envelope {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background-color: #f7f7f7;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.envelope-top {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f7f7f7;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0 0 10px 10px;
+    transform: rotateX(30deg);
+    transform-origin: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.envelope-body {
+    margin-top: 60px;
+    width: 100%;
+    height: 90px;
+    background-color: #f7f7f7;
+}
+
+.heart-icon {
+    font-size: 1.5rem;
+    color: red;
+}
+
+.click-to-open {
+    position: absolute;
+    bottom: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    display: none;
+}
+
+.papers {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.paper {
+    width: 250px;
+    height: 150px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #333;
+    opacity: 0;
+    transform-origin: center;
+    transform: scale(0.8);
+}
+
+.paper1 { transform: rotate(-10deg); }
+.paper2 { transform: rotate(10deg); }
+.paper3 { transform: rotate(-5deg); }
+
+.hidden { display: none; }
+
+.paper-link {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-editor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    border: 2px solid #ccc;
+    height: 700px; 
+    overflow-y: auto; 
+}
+
+.message-text {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+    text-align: justify;
+    /* white-space: pre-line; */
+}
+
+.gallery {
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 10px;
+    animation: scroll 20s linear infinite;
+}
+
+.gallery-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.share-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #f06292;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.share-button:hover {
+    background-color: #e91e63;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .envelope {
+        width: 150px;
+        height: 100px;
+    }
+
+    .heart-icon {
+        font-size: 1.2rem;
+    }
+
+    .click-to-open {
+        font-size: 0.8rem;
+    }
+
+    .paper {
+        width: 200px;
+        height: 120px;
+        font-size: 1rem;
+    }
+
+    .message-textarea {  
+        width: 250px;
+        height: 80px;
+    }
+
+    .gallery {
+        width: 250px;
+    }
+
+    .gallery-container img {
+        width: 80px;
+        height: 80px;
+    }
+}

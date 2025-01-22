@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tentang ustadzahku</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="message-container">
+        <div class="message-container hidden">
+            <p class="message-text">
+                Haiii ustajaahh💖
+                Semangatt 21 tahunn🥳🥳
+                Semoga selalu jadi ustadzah yang baik, lucu, menyenangkan, pintar, dan selalu jadi teman sekaligus kakak yang baik buat akuu..
+                Makasii udah selalu nemenin aku, ngingetin dan bantu aku buat jadi lebih baik, jadi kakak dan pengganti orang tuaku slama di pondok.. 
+                makasi juga udah jadi ustadzah terbaik yang palingg aku sayang💕
+                Semoga di level up ustadzah ini, ustadzah makin cantik, makin lucu, makin masyaa allah,, makin baik, makin pinter, makin sering main sama aku (hihihi). 
+                pokoknya semua yang terbaik buat ustadzah, dan do'a do'a ustadzah juga dikabulin. oiyaa.. satu lagii. 
+                Semogaa ustadzah cepet nikah😁 sama orang yang akan selalu setia sama ustadzah, cinta sehidup semati dgn ustadzah, dan bisa memberikan
+                apapun yang ustadzah inginkan, yang belum pernah tercapai. Aamiin. jangan lupa undang aku yaa dzahh
+                
+                sekali lagi, Happy level up ustadzah tersayang🥰semoga yang disemogakan tersemogakan, Aamiin. 
+                Love you always dzah Sasa❤💕💖💞
+            </p>
+        </div>  
+    </div>      
+        <div class="gallery">
+            <h2>Our Gallery</h2>
+            <div class="gallery-container">
+                <img src="image1.jpg" alt="">
+                <img src="image2.jpg" alt="">
+                <img src="image3.jpg" alt="">
+                <img src="image4.jpg" alt="">
+                <img src="image5.jpg" alt="">
+                <img src="image6.jpg" alt="">
+                <img src="image7.jpg" alt="">
+                <img src="image8.jpg" alt="">
+                <img src="image9.jpg" alt="">
+            </div>
+        </div>
+        <button class="share-button" onclick="shareWebsite()">Share</button>
+    
+
+    <script>
+        function shareWebsite() {
+            const shareText = "Lihat Website lucu inii!💗";
+            if (navigator.share) {
+                navigator.share({
+                    title: "Special dayy",
+                    text: shareText,
+                    url: window.location.href
+                }).catch(err => console.error("Error sharing:", err));
+            } else {
+                alert("Sharing is not supported on this browser!");
+            }
+        }
+    </script>
+</body>
+</html>
